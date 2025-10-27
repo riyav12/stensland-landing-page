@@ -78,6 +78,7 @@
 
 .audit-item {
   padding-bottom: 15px;
+  width: 398px;
 }
 
 .audit-item hr {
@@ -87,22 +88,25 @@
 }
 
 .audit-year {
-  font-size: 42px;
-  font-weight: 700;
-  color: #d1d5db;
+  font-size: 48px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: #001C311A;
   margin-bottom: 6px;
 }
 
 .audit-company {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   margin: 4px 0;
-  color: #0f172a;
+  color: #001C31;
 }
 
 .audit-desc {
-  font-size: 15px;
-  color: #475569;
+  font-size: 14px;
+  color: #001C31;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Responsive */
