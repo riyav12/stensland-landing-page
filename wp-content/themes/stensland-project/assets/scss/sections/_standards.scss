@@ -1,0 +1,140 @@
+/* --- Standards Section Styles --- */
+.standards-section {
+    padding: 100px 0; /* Standard section padding */
+    background-color: #fff;
+}
+
+/* Section Header Layout (Title and Description side-by-side) */
+.standards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px; /* Space before the grid starts */
+    gap: 80px;
+}
+
+.standards-title {
+    font-size: 3.5em; /* Large, bold title */
+    font-weight: 800;
+    color: #1a2a3a; /* Dark blue */
+    margin: 0;
+    flex-shrink: 0; /* Keep the title from shrinking */
+    width: 300px; /* Adjust width to match screenshot layout */
+}
+
+.standards-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+    flex-grow: 1;
+    padding-top: 10px; /* Align visually with the title baseline */
+    max-width: 904px; /* Control max width of description */
+}
+
+/* Standards Grid Layout */
+.standards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0px; /* reduced from 40px */
+    row-gap: 0; /* keep rows tight unless you want extra spacing */
+    margin-left: 474px;
+}
+
+
+.standards-item {
+    padding: 30px 0; /* Vertical padding for each item */
+    display: flex;
+    flex-direction: column;
+}
+
+.item-icon {
+    margin-bottom: 20px;
+}
+
+.item-icon img {
+    width: 40px; /* Size of the icon */
+    height: 40px;
+    /* You might need to set the color of these outline icons to dark blue if they are not already */
+    /* filter: sepia(100%) saturate(300%) hue-rotate(180deg) brightness(50%); */ 
+    /* The above is a complex filter. Better to use SVGs and control their color directly. */
+}
+
+.item-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #1a2a3a; /* Dark blue */
+    margin: 0 0 10px 0;
+}
+
+.item-details {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.4;
+}
+
+.item-details li {
+    margin-bottom: 5px;
+}
+
+.item-separator {
+    height: 1px;
+    background-color: black; /* Light grey line */
+    margin-top: 25px; /* Space between content and the line */
+    width: 84%;
+}
+
+/* Specific item styling to remove separator on last row */
+.standards-item:nth-last-child(1) .item-separator, /* Last item overall */
+.standards-item:nth-last-child(2) .item-separator { /* Second to last item overall */
+    /* You may need to adjust this depending on the total number of items */
+    /* For 6 items, this hides the line on items 5 and 6 */
+    background-color: transparent;
+}
+
+
+/* Responsive Adjustments for Standards Section */
+@media (max-width: 992px) {
+    .standards-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .standards-title {
+        width: 100%;
+        font-size: 3em;
+    }
+
+    .standards-description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .standards-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 0;
+    }
+    
+    .standards-item {
+        padding: 20px 0;
+        text-align: center; /* Center content for single column */
+    }
+
+    .item-icon {
+        margin: 0 auto 15px auto; /* Center icon */
+    }
+
+    /* Show separator between all items on mobile */
+    .standards-item .item-separator {
+        background-color: #eee;
+    }
+
+    /* But remove it on the absolute last item */
+    .standards-item:last-child .item-separator {
+        background-color: transparent;
+    }
+}

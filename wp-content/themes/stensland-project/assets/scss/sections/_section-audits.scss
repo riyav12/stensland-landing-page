@@ -1,0 +1,139 @@
+/* audit scetion */
+.audits-section {
+  background-color: #fff;
+  padding: 120px 0;
+  font-family: "Inter", sans-serif;
+  color: #0f172a;
+}
+
+/* Container */
+.audits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Top row: heading + paragraph side by side */
+.audits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.audits-title {
+  font-size: 80px;
+  font-weight: 500;
+  color: #001C31;
+  margin: 0;
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  line-height: 104.66px;
+}
+
+.audits-text {
+  flex: 1.2;
+  font-size: 16px;
+  line-height: 160%;
+  color: #001C31;
+  margin-top: 15px;
+  margin-left: -305px;
+  font-weight: 400;
+
+}
+
+/* Bottom row */
+.audits-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left: image */
+.audits-image-wrap {
+  flex: 1;
+}
+
+.audits-image {
+  width: 323px;
+  height:564px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+/* Right: audit details */
+.audits-right {
+  flex: 1.6;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 40px;
+}
+
+.audit-item {
+  padding-bottom: 15px;
+}
+
+.audit-item hr {
+  border: none;
+  border-bottom: 1px solid #000000;
+  margin-top: 20px;
+}
+
+.audit-year {
+  font-size: 42px;
+  font-weight: 700;
+  color: #d1d5db;
+  margin-bottom: 6px;
+}
+
+.audit-company {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+  color: #0f172a;
+}
+
+.audit-desc {
+  font-size: 15px;
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .audits-header {
+    flex-direction: column;
+  }
+
+  .audits-content {
+    flex-direction: column;
+  }
+
+  .audit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audits-title {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 640px) {
+  .audits-section {
+    padding: 70px 0;
+  }
+
+  .audits-title {
+    font-size: 38px;
+  }
+
+  .audit-year {
+    font-size: 30px;
+  }
+}

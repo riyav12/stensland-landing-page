@@ -1,0 +1,119 @@
+.work-section {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.work-title {
+    font-size: 84px;
+    color: #0C2439;
+    font-weight: 500;
+    margin: 0;
+    flex: 1 1 30%;
+}
+
+.work-desc {
+    flex: 1 1 60%;
+    color: #1C2C3C;
+    font-size: 16.5px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.work-buttons {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px;
+    justify-content: flex-end; /* Align buttons to left (or center) */
+}
+
+
+.work-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 28px;
+    border: 1px solid #D5DCE3;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0C2439;
+    background-color: #FFF;
+    transition: all 0.3s ease;
+    min-width: 226px;
+}
+
+.work-btn .arrow {
+    display: inline-block;
+    background-color: #0C2439;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    padding: 8px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.work-btn:hover {
+    background-color: #0C2439;
+    color: #fff;
+    border-color: #0C2439;
+}
+
+/* .work-btn:hover .arrow {
+    background-color: #fff;
+    color: #0C2439;
+} */
+
+/* Responsive */
+@media (max-width: 992px) {
+    .work-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .work-title {
+        font-size: 36px;
+    }
+    .work-desc {
+        font-size: 15px;
+    }
+    .work-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .work-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .work-title {
+        font-size: 30px;
+        text-align: center;
+    }
+    .work-desc {
+        text-align: center;
+    }
+    .work-buttons {
+        align-items: center;
+    }
+}
+.work-btn svg path {
+    stroke: #fff;
+    transition: stroke 0.3s;
+}
+
+.work-btn:hover svg path {
+    stroke: #fff;
+}

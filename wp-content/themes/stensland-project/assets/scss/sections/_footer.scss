@@ -1,0 +1,185 @@
+/* --- Footer Styles --- */
+.site-footer.main-footer {
+    background-color: #fff; /* White background */
+    padding: 50px 0; /* Vertical spacing */
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* --- Footer Branding: replicate header brand --- */
+.footer-branding .brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.footer-branding .logo-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #001C31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.footer-branding .logo-th {
+    position: relative;
+    font-family: 'Forum', serif;
+    color: #fff;
+    line-height: 1;
+    width: 24px;
+    height: 32px;
+    left: -1px;
+}
+
+.footer-branding .logo-th .t {
+    position: relative;
+    font-size: 34px;
+    top: -2px;
+    left: 6px;
+}
+
+.footer-branding .logo-th .h {
+    position: absolute;
+    font-size: 28px;
+    left: 5px;
+    top: 6px;
+}
+
+.footer-branding .brand-text {
+    font-size: 22px;
+    line-height: 100%;
+    color: #001C31;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+/* --- Footer Contact Info --- */
+.footer-contact-info {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-email {
+    font-size: 16px;
+    color: #001C31;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.footer-email:hover {
+    color: #1a2a3a;
+}
+
+/* --- Footer Social Icons --- */
+.footer-social-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-social-icons .social-icon {
+    display: inline-flex;
+    background-color: #001C31;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.footer-social-icons .social-icon:hover {
+    background-color: #0d1a26;
+}
+
+.footer-social-icons .social-icon img {
+    width: 18.75px;
+    height: 15px;
+    filter: brightness(0) invert(1);
+}
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 992px) {
+    .footer-container {
+        padding: 0 30px;
+    }
+
+    .footer-branding .brand-text {
+        font-size: 18px;
+        letter-spacing: 0.2em;
+    }
+
+    .footer-branding .logo-circle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-branding .logo-th .t {
+        font-size: 26px;
+    }
+
+    .footer-branding .logo-th .h {
+        font-size: 22px;
+        left: 6px;
+        top: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-contact-info {
+        order: 3; /* Contact info at bottom */
+    }
+
+    .footer-social-icons {
+        order: 2; /* Icons in middle */
+        justify-content: center;
+    }
+
+    .footer-branding {
+        order: 1;
+    }
+
+    .footer-branding .brand-text {
+        font-size: 16px;
+        letter-spacing: 0.15em;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-social-icons {
+        gap: 15px;
+    }
+
+    .footer-social-icons .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-social-icons .social-icon img {
+        width: 16px;
+        height: 14px;
+    }
+}

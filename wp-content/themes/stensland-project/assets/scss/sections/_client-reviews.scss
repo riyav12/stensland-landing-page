@@ -1,0 +1,340 @@
+.client-reviews-section {
+  position: relative;
+  background-color: #011b2b;
+  color: #fff;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.client-reviews-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+
+}
+
+.client-reviews-left {
+  flex: 0 0 35%;
+}
+
+.client-reviews-right {
+  flex: 0 0 60%;
+}
+
+.client-reviews-title {
+  font-size: 80px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 84px;
+  margin-top: 100px;
+  margin-left: 90px;
+}
+
+.client-review-text {
+  font-size: 20px;
+  font-family: 'Inter';
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 829px;
+  margin-top: 134px;
+}
+
+.client-review-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.client-author-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-author-name {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 140%;
+  font-family: 'Inter';
+}
+
+.client-author-role {
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.review-pattern {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 899px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* TABLETS (1024px and below) */
+@media (max-width: 1024px) {
+  .client-reviews-section {
+    padding: 100px 60px;
+  }
+
+  .client-reviews-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .client-reviews-left,
+  .client-reviews-right {
+    flex: 0 0 100%;
+  }
+
+  .client-reviews-title {
+    font-size: 64px;
+    line-height: 68px;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .client-review-text {
+    font-size: 18px;
+    margin: 0 auto 20px;
+    max-width: 85%;
+    line-height: 1.6;
+  }
+
+  .client-review-author {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .review-pattern {
+    width: 400px;
+    right: 5%;
+    opacity: 0.4;
+  }
+}
+
+/* SMALL TABLETS / LARGE PHONES */
+@media (max-width: 768px) {
+  .client-reviews-section {
+    padding: 80px 40px;
+  }
+
+  .client-reviews-title {
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  .client-review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .client-review-author {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .client-author-name {
+    font-size: 18px;
+  }
+
+  .client-author-role {
+    font-size: 15px;
+  }
+
+  .review-pattern {
+    width: 300px;
+  }
+}
+
+/* PHONES */
+@media (max-width: 480px) {
+  .client-reviews-section {
+    padding: 60px 20px;
+  }
+
+  .client-reviews-title {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 15px;
+  }
+
+  .client-review-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .client-review-author {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .client-author-img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .client-author-name {
+    font-size: 17px;
+  }
+
+  .client-author-role {
+    font-size: 14px;
+  }
+
+  .review-pattern {
+    width: 220px;
+    right: 10px;
+  }
+}
+
+/* ----- Swiper Custom Arrows (layout + hover) ----- */
+.client-review-prev,
+.client-review-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.client-review-prev:hover,
+.client-review-next:hover {
+  color: #fff;
+}
+
+.client-reviews-slider {
+  position: relative;
+}
+
+/* Minimal Swiper layout helpers (do not break design) */
+.client-reviews-slider { overflow: hidden; }
+.client-reviews-slider .swiper-wrapper { display: flex; }
+.client-reviews-slider .swiper-slide { width: 100%; flex-shrink: 0; }
+
+/* --- Position arrows in top-right corner --- */
+.client-review-arrows {
+  position: absolute;
+  top: 40px; /* adjust if needed */
+  right: 60px;
+  display: flex;
+  gap: 18px;
+  z-index: 10;
+}
+
+.client-review-prev,
+.client-review-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff; /* white arrows */
+  font-size: 22px;
+  transition: color 0.2s ease;
+}
+
+.client-review-prev:hover,
+.client-review-next:hover {
+  color: #CBA15D;
+}
+
+
+/* --- Fix alignment for Gutenberg review block layout --- */
+.client-reviews-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 120px 90px;
+  background-color: #011b2b;
+  color: #fff;
+  position: relative;
+}
+
+.client-reviews-section > * {
+  flex: 1;
+}
+
+/* Keep heading fixed on the left */
+.client-reviews-section h2,
+.client-reviews-section .client-reviews-title {
+  flex: 0 0 35%;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 84px;
+  margin: 0;
+}
+
+/* Push review slider content to the right */
+.client-reviews-section .wp-block-group,
+.client-reviews-section .wp-block-columns,
+.client-reviews-section .client-reviews-slider {
+  flex: 0 0 60%;
+  margin-left: auto;
+}
+
+/* Ensure the text doesn't stick to top */
+.client-reviews-section .client-review-text,
+.client-reviews-section .wp-block-quote {
+  margin-top: 60px !important;
+}
+
+/* Arrows top-right */
+.client-review-arrows {
+  position: absolute;
+  top: 60px;
+  right: 90px;
+  display: flex;
+  gap: 18px;
+  z-index: 10;
+}
+
+.client-review-prev,
+.client-review-next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.client-review-prev:hover,
+.client-review-next:hover {
+  color: #CBA15D;
+}
+
+.client-reviews-section {
+  position: relative;
+  background-color: #011b2b;
+  color: #fff;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+/* ✅ Add this here */
+.client-reviews-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

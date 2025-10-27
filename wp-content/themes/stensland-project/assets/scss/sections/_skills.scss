@@ -1,0 +1,127 @@
+/* --- SKILLS SECTION --- */
+.skills-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+/* Header */
+.skills-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.skills-title {
+  font-size: 80px;
+  color: #001C31;
+  font-weight: 400;
+  margin-left: 90px;
+  margin-top: 100px;
+  flex: 1 1 30%;
+  width: 183px;
+  height: 105px;
+}
+
+.skills-desc {
+  flex: 1 1 60%;
+  color: #001C31E5;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+  width: 827px;
+  height: 64px;
+  margin-top: 136px;
+}
+
+/* --- MARQUEE LOGOS --- */
+.skills-logos-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skills-logos {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.skills-logos img {
+  height: 67px;
+  width: auto;
+  opacity: 0.42;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.skills-logos img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .skills-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skills-title {
+    font-size: 48px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .skills-desc {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px auto 60px;
+    width: 90%;
+  }
+
+  .skills-logos {
+    gap: 40px;
+  }
+
+  .skills-logos img {
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .skills-desc {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .skills-logos {
+    gap: 25px;
+  }
+
+  .skills-logos img {
+    height: 40px;
+  }
+}

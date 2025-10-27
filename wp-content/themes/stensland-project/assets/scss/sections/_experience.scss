@@ -1,0 +1,73 @@
+/* ---- Professional Experience Section ---- */
+.professional-experience-section {
+  background-color: #001f33;
+  color: #fff;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.professional-experience-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.experience-left {
+  flex: 0 0 35%;
+}
+
+.experience-left h2 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.experience-right {
+  flex: 0 0 60%;
+}
+
+.experience-item {
+  margin-bottom: 50px;
+}
+
+.experience-item h3 {
+  font-size: 32px;
+  font-weight: 600;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.experience-item p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.extra-experience {
+  display: none;
+}
+
+#extra1, #extra2, #extra3 {
+  display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

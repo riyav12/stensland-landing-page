@@ -1,0 +1,110 @@
+.education-section {
+  position: relative;
+  background-image: url('../images/education-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 120px 0;
+}
+
+/* Semi-transparent overlay */
+.education-overlay {
+
+  padding: 80px 0;
+}
+
+/* Flex layout: title + timeline side by side */
+.education-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Title styling */
+.education-title {
+  font-size: 72px;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Timeline layout */
+.education-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Each education entry */
+.education-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 30px;
+}
+
+/* Vertical divider between items */
+.education-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Year styling (top, large and spaced) */
+.education-year {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px; /* Increased for visible spacing like your screenshot */
+}
+
+/* Degree below year */
+.education-degree {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* University / school name */
+.education-school {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Responsive behavior */
+@media (max-width: 992px) {
+  .education-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-title {
+    font-size: 56px;
+    margin-bottom: 40px;
+  }
+
+  .education-timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-item {
+    padding: 25px 0;
+  }
+
+  .education-item:not(:last-child)::after {
+    display: none;
+  }
+}
