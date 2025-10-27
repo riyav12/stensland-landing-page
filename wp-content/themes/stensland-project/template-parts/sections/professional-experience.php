@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextItem = items[visibleCount];
     if (nextItem) {
       nextItem.style.display = "block";
-      nextItem.style.animation = "fadeIn 0.8s ease";
+      nextItem.style.animation = "slideInRight 0.8s ease forwards";
       visibleCount++;
       makeNextClickable();
     }

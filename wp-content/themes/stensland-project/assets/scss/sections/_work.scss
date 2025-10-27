@@ -23,9 +23,9 @@
 .work-desc {
     flex: 1 1 60%;
     color: #1C2C3C;
-    font-size: 16.5px;
-    line-height: 1.8;
-    margin: 0;
+    font-size: 17px;
+    line-height: 160%;
+    margin-left: -210px;
 }
 
 .work-buttons {
@@ -44,7 +44,7 @@
     padding: 16px 28px;
     border: 1px solid #D5DCE3;
     border-radius: 4px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     color: #0C2439;
@@ -66,9 +66,9 @@
 
 /* Hover effects */
 .work-btn:hover {
-    background-color: #0C2439;
+    background-color: #bdd4e9;
     color: #fff;
-    border-color: #0C2439;
+    border-color: #bdd4e9;
 }
 
 /* .work-btn:hover .arrow {
