@@ -4,20 +4,19 @@
  * Template Path: template-parts/sections/about-me.php
  */
 
-// Load field values
-$heading             = get_field('about_me_heading');
-$text                = get_field('about_me_text');
-$image               = get_field('about_me_image');
-$exp_number          = get_field('about_me_experience_number');
-$exp_text            = get_field('about_me_experience_text');
-$services            = get_field('about_me_services');
+$heading    = get_field('about_me_heading');
+$text       = get_field('about_me_text');
+$image      = get_field('about_me_image');
+$exp_number = get_field('about_me_experience_number');
+$exp_text   = get_field('about_me_experience_text');
+$services   = get_field('about_me_services');
 ?>
 
 <section class="about-me-section">
   <div class="about-me-container">
 
     <!-- Left: Heading & Text -->
-    <div class="about-me-text" style="margin-top:-425px;">
+    <div class="about-me-text">
       <?php if ($heading): ?>
         <h2><?php echo esc_html($heading); ?></h2>
       <?php endif; ?>
@@ -46,7 +45,7 @@ $services            = get_field('about_me_services');
     </div>
 
     <!-- Right: Services List -->
-    <div class="about-me-services" style="margin-top: 395px;">
+    <div class="about-me-services">
       <?php if ($services): ?>
         <ul>
           <?php foreach ($services as $service): ?>

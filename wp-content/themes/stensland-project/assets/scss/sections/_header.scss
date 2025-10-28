@@ -31,7 +31,7 @@ body {
   text-decoration: none;
 }
 
-/* --- Circle background --- */
+
 .logo-circle {
   width: 42px;
   height: 42px;
@@ -44,7 +44,7 @@ body {
   flex-shrink: 0;
 }
 
-/* --- TH overlapping --- */
+
 .logo-th {
   position: relative;
   font-family: 'Forum', serif;
@@ -57,7 +57,7 @@ body {
 
 .logo-th .t {
   position: relative;
-  font-size: 34px; /* Increased to match figma */
+  font-size: 34px; 
   top: -2px;
   left: 6px;
 }
@@ -69,7 +69,7 @@ body {
   top: 6px;
 }
 
-/* --- Brand text beside circle --- */
+
 .brand-text {
   font-size: 22px;
   line-height: 100%;
@@ -79,14 +79,12 @@ body {
   text-transform: uppercase;
 }
 
-/* --- Right side (Language + Button) --- */
 .header-right {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-/* --- Language Dropdown --- */
 .lang-select {
   position: relative;
   display: flex;
@@ -104,16 +102,15 @@ body {
   height: 24px;
 }
 
-/* --- Language Text (EN) --- */
+
 .lang-current span {
-  font-size: 20px; /* As per Figma */
+  font-size: 20px; 
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0;
   color: #001C31;
 }
 
-/* --- Dropdown Arrow --- */
 .lang-arrow {
   width: 16.5px;
   height: 9px;
@@ -132,7 +129,7 @@ body {
   transform: rotate(180deg);
 }
 
-/* --- Dropdown List --- */
+
 .lang-dropdown {
   position: absolute;
   top: 36px;
@@ -170,7 +167,7 @@ body {
   color: #fff;
 }
 
-/* --- Book a Call Button --- */
+
 .book-btn {
   background-color: #001C31;
   color: #fff;

@@ -1,50 +1,55 @@
 /* --- Standards Section Styles --- */
 .standards-section {
-    padding: 100px 0; /* Standard section padding */
+    padding: 100px 0;
     background-color: #fff;
 }
 
-/* Section Header Layout (Title and Description side-by-side) */
 .standards-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 60px; /* Space before the grid starts */
+    margin-bottom: 60px;
     gap: 80px;
 }
 
 .standards-title {
-    font-size: 3.5em; /* Large, bold title */
-    font-weight: 800;
-    color: #1a2a3a; /* Dark blue */
+    font-size: 80px; 
+    font-weight: 500;
+    color: #001C31; 
     margin: 0;
-    flex-shrink: 0; /* Keep the title from shrinking */
-    width: 300px; /* Adjust width to match screenshot layout */
+    font-family: 'Inter', sans-serif;
+    line-height: 104.66px;
+    flex-shrink: 0; 
+    width: 300px; 
 }
 
 .standards-description {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #444;
+    font-size: 16px;
+    line-height: 160%;
+    color: #001C31E5;
+    font-weight: 400;
     flex-grow: 1;
-    padding-top: 10px; /* Align visually with the title baseline */
-    max-width: 904px; /* Control max width of description */
+    font-family: 'Inter', sans-serif;
+    padding-top: 10px; 
+    max-width: 904px; 
 }
 
-/* Standards Grid Layout */
+/* Grid Layout */
 .standards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 0px; /* reduced from 40px */
-    row-gap: 0; /* keep rows tight unless you want extra spacing */
+    column-gap: 60px;
+    row-gap: 40px;
     margin-left: 474px;
+    align-items: start;
 }
 
-
 .standards-item {
-    padding: 30px 0; /* Vertical padding for each item */
     display: flex;
     flex-direction: column;
+    justify-content: space-between; 
+    padding: 30px 0;
+    height: 100%; 
 }
 
 .item-icon {
@@ -52,27 +57,27 @@
 }
 
 .item-icon img {
-    width: 40px; /* Size of the icon */
+    width: 40px;
     height: 40px;
-    /* You might need to set the color of these outline icons to dark blue if they are not already */
-    /* filter: sepia(100%) saturate(300%) hue-rotate(180deg) brightness(50%); */ 
-    /* The above is a complex filter. Better to use SVGs and control their color directly. */
 }
 
 .item-title {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #1a2a3a; /* Dark blue */
+    font-size: 20px;
+    font-weight: 600;
+    color: #001C31; 
     margin: 0 0 10px 0;
+    line-height: 120%;
 }
 
 .item-details {
-    list-style: none; /* Remove default bullet points */
+    list-style: none; 
     padding: 0;
     margin: 0;
-    font-size: 0.95em;
-    color: #666;
-    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    color: #001C31;
+    line-height: 140%;
 }
 
 .item-details li {
@@ -81,59 +86,99 @@
 
 .item-separator {
     height: 1px;
-    background-color: black; /* Light grey line */
-    margin-top: 25px; /* Space between content and the line */
+    background-color: black;
+    margin-top: auto; 
     width: 84%;
 }
 
-/* Specific item styling to remove separator on last row */
-.standards-item:nth-last-child(1) .item-separator, /* Last item overall */
-.standards-item:nth-last-child(2) .item-separator { /* Second to last item overall */
-    /* You may need to adjust this depending on the total number of items */
-    /* For 6 items, this hides the line on items 5 and 6 */
+.standards-item:nth-last-child(1) .item-separator, 
+.standards-item:nth-last-child(2) .item-separator { 
     background-color: transparent;
 }
 
 
-/* Responsive Adjustments for Standards Section */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+    .standards-header {
+        gap: 40px;
+    }
+    .standards-title {
+        font-size: 64px;
+        line-height: 90px;
+    }
+    .standards-grid {
+        margin-left: 200px;
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
     .standards-header {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
         text-align: center;
+        gap: 30px;
     }
 
     .standards-title {
-        width: 100%;
-        font-size: 3em;
+        font-size: 60px;
+        width: auto;
+        text-align: center;
     }
 
     .standards-description {
         text-align: center;
+        max-width: 700px;
+    }
+
+    .standards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 30px;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 0 40px;
     }
 }
 
 @media (max-width: 768px) {
-    .standards-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 0;
+    .standards-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
-    
+
+    .standards-title {
+        font-size: 42px;
+        line-height: 60px;
+    }
+
+    .standards-description {
+        font-size: 15px;
+        line-height: 150%;
+        padding: 0 20px;
+    }
+
+    .standards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
     .standards-item {
+        text-align: center;
         padding: 20px 0;
-        text-align: center; /* Center content for single column */
     }
 
     .item-icon {
-        margin: 0 auto 15px auto; /* Center icon */
+        margin: 0 auto 15px auto;
     }
 
-    /* Show separator between all items on mobile */
-    .standards-item .item-separator {
+    .item-separator {
+        width: 100%;
         background-color: #eee;
     }
 
-    /* But remove it on the absolute last item */
     .standards-item:last-child .item-separator {
         background-color: transparent;
     }

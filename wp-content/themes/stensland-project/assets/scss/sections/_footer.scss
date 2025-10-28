@@ -1,7 +1,7 @@
 /* --- Footer Styles --- */
 .site-footer.main-footer {
     background-color: #fff; /* White background */
-    padding: 50px 0; /* Vertical spacing */
+    padding: 50px 0; 
     font-family: 'Inter', sans-serif;
 }
 
@@ -16,7 +16,7 @@
     flex-wrap: wrap;
 }
 
-/* --- Footer Branding: replicate header brand --- */
+
 .footer-branding .brand {
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@
     text-transform: uppercase;
 }
 
-/* --- Footer Contact Info --- */
+
 .footer-contact-info {
     flex-grow: 1;
     text-align: center;
@@ -88,7 +88,7 @@
     color: #1a2a3a;
 }
 
-/* --- Footer Social Icons --- */
+
 .footer-social-icons {
     display: flex;
     gap: 24px;
@@ -115,7 +115,7 @@
     filter: brightness(0) invert(1);
 }
 
-/* --- Responsive Adjustments for Footer --- */
+
 @media (max-width: 992px) {
     .footer-container {
         padding: 0 30px;
@@ -150,11 +150,11 @@
     }
 
     .footer-contact-info {
-        order: 3; /* Contact info at bottom */
+        order: 3; 
     }
 
     .footer-social-icons {
-        order: 2; /* Icons in middle */
+        order: 2; 
         justify-content: center;
     }
 

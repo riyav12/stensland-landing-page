@@ -20,6 +20,7 @@
 
 .client-reviews-right {
   flex: 0 0 60%;
+  margin-left: -60px;
 }
 
 .client-reviews-title {
@@ -77,9 +78,9 @@
   pointer-events: none;
 }
 
-/* ---------- Responsive Styles ---------- */
 
-/* TABLETS (1024px and below) */
+
+
 @media (max-width: 1024px) {
   .client-reviews-section {
     padding: 100px 60px;
@@ -123,7 +124,7 @@
   }
 }
 
-/* SMALL TABLETS / LARGE PHONES */
+
 @media (max-width: 768px) {
   .client-reviews-section {
     padding: 80px 40px;
@@ -159,7 +160,7 @@
   }
 }
 
-/* PHONES */
+
 @media (max-width: 480px) {
   .client-reviews-section {
     padding: 60px 20px;
@@ -201,7 +202,7 @@
   }
 }
 
-/* ----- Swiper Custom Arrows (layout + hover) ----- */
+
 .client-review-prev,
 .client-review-next {
   width: 45px;
@@ -222,15 +223,15 @@
   position: relative;
 }
 
-/* Minimal Swiper layout helpers (do not break design) */
+
 .client-reviews-slider { overflow: hidden; }
 .client-reviews-slider .swiper-wrapper { display: flex; }
 .client-reviews-slider .swiper-slide { width: 100%; flex-shrink: 0; }
 
-/* --- Position arrows in top-right corner --- */
+
 .client-review-arrows {
   position: absolute;
-  top: 40px; /* adjust if needed */
+  top: 40px; 
   right: 60px;
   display: flex;
   gap: 18px;
@@ -246,7 +247,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #fff; /* white arrows */
+  color: #fff; 
   font-size: 22px;
   transition: color 0.2s ease;
 }
@@ -257,7 +258,7 @@
 }
 
 
-/* --- Fix alignment for Gutenberg review block layout --- */
+
 .client-reviews-section {
   display: flex;
   justify-content: space-between;
@@ -272,7 +273,7 @@
   flex: 1;
 }
 
-/* Keep heading fixed on the left */
+
 .client-reviews-section h2,
 .client-reviews-section .client-reviews-title {
   flex: 0 0 35%;
@@ -282,7 +283,7 @@
   margin: 0;
 }
 
-/* Push review slider content to the right */
+
 .client-reviews-section .wp-block-group,
 .client-reviews-section .wp-block-columns,
 .client-reviews-section .client-reviews-slider {
@@ -290,13 +291,13 @@
   margin-left: auto;
 }
 
-/* Ensure the text doesn't stick to top */
+
 .client-reviews-section .client-review-text,
 .client-reviews-section .wp-block-quote {
   margin-top: 60px !important;
 }
 
-/* Arrows top-right */
+
 .client-review-arrows {
   position: absolute;
   top: 60px;
@@ -332,9 +333,103 @@
   overflow: hidden;
 }
 
-/* ✅ Add this here */
+
 .client-reviews-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.client-review-text {
+  margin-left: 0 !important; 
+  text-align: left;
+}
+
+
+@media (max-width: 1024px) {
+  .client-reviews-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 40px;
+  }
+
+  .client-reviews-section > * {
+    flex: none;
+    width: 100%;
+  }
+
+  .client-reviews-section h2,
+  .client-reviews-section .client-reviews-title {
+    font-size: 64px;
+    line-height: 70px;
+    text-align: center;
+    margin: 0 0 40px 0;
+  }
+
+  .client-reviews-section .wp-block-group,
+  .client-reviews-section .wp-block-columns,
+  .client-reviews-section .client-reviews-slider {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .client-review-text,
+  .wp-block-quote {
+    margin: 0 auto 20px !important;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .client-review-author {
+    justify-content: center;
+  }
+
+  .client-review-arrows {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-reviews-section {
+    padding: 80px 30px;
+  }
+
+  .client-reviews-section .client-reviews-title {
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  .client-review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .client-review-author {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-reviews-section {
+    padding: 60px 20px;
+  }
+
+  .client-reviews-section .client-reviews-title {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+
+  .client-review-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+

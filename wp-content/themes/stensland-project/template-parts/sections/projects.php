@@ -5,7 +5,7 @@
 
 $section_title = get_field('section_title');
 $section_description = get_field('section_description');
-$tabs = get_field('tabs'); // get all tabs at once
+$tabs = get_field('tabs');
 ?>
 
 <section class="projects-section">
@@ -42,6 +42,7 @@ $tabs = get_field('tabs'); // get all tabs at once
                             $project_year_range = $project['project_year_range'];
                             $project_title = $project['project_title'];
                             $project_description = $project['project_description'];
+                            $iso_tags = $project['iso_tags'] ?? [];
                             ?>
                             <div class="project-item">
                                 <div class="project-image">
@@ -49,15 +50,18 @@ $tabs = get_field('tabs'); // get all tabs at once
                                         <img src="<?php echo esc_url($project_image['url']); ?>" alt="<?php echo esc_attr($project_title); ?>">
                                     <?php endif; ?>
                                 </div>
-                                <div class="project-meta">
-                                    <?php if ($project_role): ?>
-                                        <p class="project-role"><strong>Role:</strong> <?php echo esc_html($project_role); ?></p>
-                                    <?php endif; ?>
 
-                                    <?php if ($project_year_range): ?>
-                                        <p class="project-duration" style="margin-top: -41px; margin-left: 302px;">
-                                            <?php echo esc_html($project_year_range); ?>
-                                        </p>
+                                <div class="project-meta">
+                                    <?php if ($project_role || $project_year_range): ?>
+                                        <div class="meta-top">
+                                            <?php if ($project_role): ?>
+                                                <span class="project-role"><strong>Role:</strong> <?php echo esc_html($project_role); ?></span>
+                                            <?php endif; ?>
+
+                                            <?php if ($project_year_range): ?>
+                                                <span class="project-duration"><?php echo esc_html($project_year_range); ?></span>
+                                            <?php endif; ?>
+                                        </div>
                                     <?php endif; ?>
 
                                     <?php if ($project_title): ?>
@@ -68,9 +72,9 @@ $tabs = get_field('tabs'); // get all tabs at once
                                         <p class="project-desc"><?php echo esc_html($project_description); ?></p>
                                     <?php endif; ?>
 
-                                    <?php if (!empty($project['iso_tags'])): ?>
-                                        <div class="project-tags">
-                                            <?php foreach ($project['iso_tags'] as $tag): ?>
+                                    <?php if (!empty($iso_tags)): ?>
+                                        <div class="iso-tags">
+                                            <?php foreach ($iso_tags as $tag): ?>
                                                 <span class="iso-tag"><?php echo esc_html($tag['tag']); ?></span>
                                             <?php endforeach; ?>
                                         </div>

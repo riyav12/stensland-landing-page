@@ -1,4 +1,4 @@
-/* audit scetion */
+/* ---- Audits Section ---- */
 .audits-section {
   background-color: #fff;
   padding: 120px 0;
@@ -16,7 +16,7 @@
   gap: 60px;
 }
 
-/* Top row: heading + paragraph side by side */
+/* Header */
 .audits-header {
   display: flex;
   justify-content: space-between;
@@ -42,29 +42,26 @@
   margin-top: 15px;
   margin-left: -305px;
   font-weight: 400;
-
 }
 
-/* Bottom row */
+/* Content Layout */
 .audits-content {
   display: flex;
   gap: 60px;
   align-items: flex-start;
 }
 
-/* Left: image */
 .audits-image-wrap {
   flex: 1;
 }
 
 .audits-image {
   width: 323px;
-  height:564px;
+  height: 564px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   object-fit: cover;
 }
 
-/* Right: audit details */
 .audits-right {
   flex: 1.6;
 }
@@ -109,35 +106,155 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Responsive */
+
+ 
+@media (max-width: 1200px) {
+  .audits-title {
+    font-size: 64px;
+  }
+
+  .audits-text {
+    margin-left: -150px;
+    font-size: 15px;
+  }
+
+  .audits-image {
+    width: 300px;
+    height: 520px;
+  }
+
+  .audit-item {
+    width: 100%;
+  }
+}
+
+ 
 @media (max-width: 1024px) {
   .audits-header {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .audits-title {
+    font-size: 60px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .audits-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 0;
+    max-width: 700px;
+    text-align: center;
   }
 
   .audits-content {
     flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .audits-image {
+    width: 300px;
+    height: auto;
   }
 
   .audit-grid {
     grid-template-columns: 1fr;
+    row-gap: 30px;
+    column-gap: 0;
   }
 
-  .audits-title {
-    font-size: 52px;
-  }
-}
-
-@media (max-width: 640px) {
-  .audits-section {
-    padding: 70px 0;
-  }
-
-  .audits-title {
-    font-size: 38px;
+  .audit-item {
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .audit-year {
-    font-size: 30px;
+    font-size: 42px;
+  }
+
+  .audit-company {
+    font-size: 18px;
+  }
+}
+
+ 
+@media (max-width: 600px) {
+  .audits-section {
+    padding: 80px 0;
+  }
+
+  .audits-container {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .audits-title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .audits-text {
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .audits-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .audits-image {
+    width: 260px;
+    height: auto;
+  }
+
+  .audit-grid {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .audit-item {
+    text-align: center;
+    width: 100%;
+  }
+
+  .audit-year {
+    font-size: 32px;
+  }
+
+  .audit-company {
+    font-size: 16px;
+  }
+
+  .audit-desc {
+    font-size: 14px;
+  }
+}
+
+ 
+@media (max-width: 400px) {
+  .audits-title {
+    font-size: 34px;
+  }
+
+  .audits-text {
+    font-size: 14px;
+  }
+
+  .audit-year {
+    font-size: 28px;
+  }
+
+  .audit-company {
+    font-size: 15px;
   }
 }

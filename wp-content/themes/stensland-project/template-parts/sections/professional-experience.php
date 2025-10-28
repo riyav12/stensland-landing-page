@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let visibleCount = 3;
 
   function makeNextClickable() {
-    items.forEach(item => item.classList.remove("clickable")); // remove from all
+    items.forEach(item => item.classList.remove("clickable")); 
     if (items[visibleCount - 1]) {
       const nextClickable = items[visibleCount - 1];
       nextClickable.classList.add("clickable");

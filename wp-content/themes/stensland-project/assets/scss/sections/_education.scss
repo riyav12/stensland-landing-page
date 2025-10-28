@@ -8,13 +8,20 @@
   padding: 120px 0;
 }
 
-/* Semi-transparent overlay */
-.education-overlay {
-
-  padding: 80px 0;
+.education-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 28, 49, 0.61);
+  z-index: 1;
 }
 
-/* Flex layout: title + timeline side by side */
+.education-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Layout */
 .education-header {
   display: flex;
   align-items: flex-start;
@@ -23,88 +30,184 @@
   flex-wrap: wrap;
 }
 
-/* Title styling */
 .education-title {
-  font-size: 72px;
-  font-weight: 400;
-  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   flex-shrink: 0;
+  line-height: 104.66px;
+  color: #fff;
 }
 
-/* Timeline layout */
+/* Timeline Layout */
 .education-timeline {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   flex: 1;
-  flex-wrap: wrap;
-  gap: 40px;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: relative;
 }
 
-/* Each education entry */
+/* Individual Item */
 .education-item {
   flex: 1;
-  text-align: center;
+  text-align: left;
   position: relative;
-  padding: 0 30px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Vertical divider between items */
-.education-item:not(:last-child)::after {
+.education-item::before {
   content: "";
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 1px;
-  height: 80%;
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Year styling (top, large and spaced) */
+/* Year */
 .education-year {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 600;
-  margin-bottom: 20px; /* Increased for visible spacing like your screenshot */
+  line-height: 140%;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 25px;
 }
 
-/* Degree below year */
+/* Degree */
 .education-degree {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  line-height: 120%;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
 }
 
-/* University / school name */
+/* School */
 .education-school {
-  font-size: 16px;
-  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Responsive behavior */
-@media (max-width: 992px) {
+ 
+
+ 
+@media (max-width: 1024px) {
+  .education-section {
+    padding: 100px 0;
+  }
+
+  .education-title {
+    font-size: 64px;
+    line-height: 1.2;
+  }
+
+  .education-timeline {
+    gap: 0;
+  }
+
+  .education-item {
+    padding-left: 40px;
+  }
+
+  .education-year {
+    font-size: 34px;
+  }
+
+  .education-degree {
+    font-size: 18px;
+  }
+
+  .education-school {
+    font-size: 13px;
+  }
+}
+
+ 
+@media (max-width: 768px) {
+  .education-section {
+    padding: 80px 20px;
+  }
+
   .education-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 40px;
   }
 
   .education-title {
-    font-size: 56px;
+    font-size: 48px;
+    line-height: 1.3;
+    text-align: center;
     margin-bottom: 40px;
   }
 
   .education-timeline {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 40px;
   }
 
   .education-item {
-    padding: 25px 0;
+    padding-left: 25px;
+    position: relative;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .education-item:not(:last-child)::after {
-    display: none;
+  .education-item::before {
+    display: none;  
+  }
+
+  .education-year {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .education-degree {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .education-school {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .education-section {
+    padding: 70px 25px;
+  }
+
+  .education-title {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+
+  .education-year {
+    font-size: 26px;
+  }
+
+  .education-degree {
+    font-size: 16px;
+  }
+
+  .education-school {
+    font-size: 13px;
+  }
+
+  .education-item {
+    padding-left: 20px;
   }
 }
