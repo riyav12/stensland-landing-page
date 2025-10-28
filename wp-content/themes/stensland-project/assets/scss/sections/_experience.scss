@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1258px;
   margin: 0 auto;
   padding: 0 40px;
   gap: 40px;
@@ -62,6 +62,8 @@
 .experience-item p {
   margin-top: 10px;
   font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
   line-height: 140%;
 }
 

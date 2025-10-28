@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <!-- Arrows (stay inside right block but over content) -->
+        
         <div class="client-review-arrows">
           <div class="client-review-prev" aria-hidden="true">&#8592;</div>
           <div class="client-review-next" aria-hidden="true">&#8594;</div>
