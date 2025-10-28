@@ -291,3 +291,10 @@ function enqueue_client_reviews_assets() {
   " );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_client_reviews_assets' );
+
+
+// Register custom strings for Polylang translation
+if ( function_exists('pll_register_string') ) {
+    pll_register_string('Header', 'STENSLAND', 'Header');
+    pll_register_string('Header', 'Book a Call', 'Header');
+}
