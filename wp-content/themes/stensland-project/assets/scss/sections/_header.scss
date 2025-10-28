@@ -31,7 +31,6 @@ body {
   text-decoration: none;
 }
 
-
 .logo-circle {
   width: 42px;
   height: 42px;
@@ -43,7 +42,6 @@ body {
   position: relative;
   flex-shrink: 0;
 }
-
 
 .logo-th {
   position: relative;
@@ -69,7 +67,6 @@ body {
   top: 6px;
 }
 
-
 .brand-text {
   font-size: 22px;
   line-height: 100%;
@@ -85,6 +82,7 @@ body {
   gap: 30px;
 }
 
+/* --- Language Selector --- */
 .lang-select {
   position: relative;
   display: flex;
@@ -101,7 +99,6 @@ body {
   width: 56px;
   height: 24px;
 }
-
 
 .lang-current span {
   font-size: 20px; 
@@ -129,7 +126,6 @@ body {
   transform: rotate(180deg);
 }
 
-
 .lang-dropdown {
   position: absolute;
   top: 36px;
@@ -155,19 +151,21 @@ body {
   transform: translateY(0);
 }
 
-.lang-dropdown li {
-  padding: 8px 16px;
+/* ✅ Transferred hover color code */
+.lang-dropdown a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
   color: #001C31;
-  font-size: 14px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.lang-dropdown li:hover {
-  background-color: #001C31;
-  color: #fff;
+.lang-dropdown a:hover {
+  background-color: #f1f1f1; /* light gray hover */
+  color: #001C31; /* keep readable dark text */
 }
 
-
+/* --- Book a Call Button --- */
 .book-btn {
   background-color: #001C31;
   color: #fff;
