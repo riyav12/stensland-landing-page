@@ -18,7 +18,7 @@
                 $total_items = count(get_field('standards_items'));
                 while( have_rows('standards_items') ): the_row(); 
                     $count++;
-                    $icon = get_sub_field('icon'); // if set to URL
+                    $icon = get_sub_field('icon'); 
                     $title = get_sub_field('title');
             ?>
                 <div class="standards-item">
@@ -40,7 +40,6 @@
                         </ul>
                     <?php endif; ?>
 
-                    <!-- Separator only between items, not after last two -->
                     <?php if ($count < $total_items - 1): ?>
                         <div class="item-separator"></div>
                     <?php endif; ?>

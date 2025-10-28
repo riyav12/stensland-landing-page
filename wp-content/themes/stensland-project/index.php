@@ -13,11 +13,6 @@ get_header();
         the_post();
         the_content();
     endwhile;
-
-    // Example sections — we’ll add them one by one
-
-
-
     ?>
 </main>
 

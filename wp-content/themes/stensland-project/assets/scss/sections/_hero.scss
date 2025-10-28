@@ -45,8 +45,8 @@
   margin-top: 100px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  cursor: pointer; /* hand cursor */
-  text-decoration: none; /* remove underline */
+  cursor: pointer; 
+  text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -76,7 +76,7 @@
   line-height: 160%;
   color: #444;
   margin-bottom: 50px;
-  margin-left: -152px; /* Original desktop layout */
+  margin-left: -152px; 
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
@@ -84,7 +84,7 @@
 .social-icons {
   display: flex;
   gap: 24px;
-  margin-left: 483px; /* Original desktop placement */
+  margin-left: 483px; 
 }
 
 .social-icon {
@@ -108,21 +108,86 @@
   filter: brightness(0) invert(1);
 }
 
-/* --- Responsive Adjustments --- */
 
-/* Medium screens - tablets */
-@media (max-width: 1024px) {
+/* --- Laptop & Tablet adjustments --- */
+@media (max-width: 1200px) and (min-width: 769px) {
   .hero-content {
-    gap: 40px;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .hero-left {
+    max-width: 40%;
+  }
+
+  .hero-right {
+    max-width: 55%;
+  }
+
+  .hero-title {
+    font-size: 100px;
+    width: auto;
+    height: auto;
+  }
+
+  .hero-description {
+    margin-left: -60px;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    margin-top: 40px;
+    justify-content: flex-start;
   }
 }
 
-/* Mobile: Stack everything vertically and center */
+
+/* --- Fix Hero responsiveness for 1024px screens --- */
+@media (max-width: 1060px) and (min-width: 993px) {
+  .hero-content {
+    max-width: 92vw;
+    gap: 60px;
+    justify-content: space-between;
+  }
+
+  .hero-left {
+    max-width: 45%;
+  }
+
+  .hero-right {
+    max-width: 50%;
+  }
+
+  .hero-title {
+    font-size: 115px;
+    width: auto;
+    height: auto;
+  }
+
+  .hero-description {
+    margin-left: -60px; 
+    font-size: 23px;
+    line-height: 1.6;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+}
+
+
+/* --- Tablet and below --- */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 30px;
   }
 
   .hero-left,
@@ -147,6 +212,7 @@
     margin-left: 0;
     margin-top: 30px;
     font-size: clamp(18px, 4vw, 24px);
+    line-height: 1.6;
   }
 
   .social-icons {
@@ -156,7 +222,8 @@
   }
 }
 
-/* Very small mobile devices */
+
+/* --- Mobile --- */
 @media (max-width: 480px) {
   .hero-title {
     font-size: clamp(3rem, 12vw, 5rem);

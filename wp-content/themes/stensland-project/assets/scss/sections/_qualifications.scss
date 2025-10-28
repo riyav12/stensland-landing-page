@@ -1,3 +1,5 @@
+ 
+
 .qualifications-section {
     background-color: #1a2a3a;
     color: #fff;
@@ -6,11 +8,11 @@
     overflow: hidden;
 }
 
-/* Pattern overlay centered between title and list */
+ 
 .qualifications-section::before {
     content: "";
     position: absolute;
-    top: 35%; /* shifted upward from 50% → sits between title & list */
+    top: 35%; 
     left: 50%;
     width: 650px;
     height: 650px;
@@ -24,7 +26,7 @@
     z-index: 0;
 }
 
-/* Ensure content sits above pattern */
+ 
 .qualifications-content {
     position: relative;
     z-index: 1;
@@ -36,6 +38,7 @@
     max-width: 1366px;
     margin: 0 auto;
 }
+
 
 .qualifications-title-wrap {
     flex-grow: 1;
@@ -52,33 +55,33 @@
     font-family: 'Inter', sans-serif;
 }
 
+ 
 .qualifications-list {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 25px;
     font-size: 20px;
     font-weight: 400;
     line-height: 100%;
     font-family: 'Inter', sans-serif;
-    width: 656px;
-    height: 15px;
+    width: auto;              
+    max-width: 100%;          
     margin-right: 35px;
-    white-space: nowrap;
+    white-space: nowrap;      
     text-align: right;
+    height: auto;
+    flex-wrap: nowrap;        
 }
 
-.qual-item {
-    /* keep default */
-}
-
+ 
 .separator {
     color: #fff;
     font-size: 1.1em;
 }
 
-/* --- Responsive --- */
-
+ 
 @media (max-width: 1024px) {
     .qualifications-title {
         font-size: 60px;
@@ -91,9 +94,11 @@
         width: auto;
         margin-right: 0;
         gap: 15px;
+        flex-wrap: wrap;           
+        justify-content: center;    
     }
 
-     .qualifications-section::before {
+    .qualifications-section::before {
         top: 38%;
         width: 500px;
         height: 500px;
@@ -101,6 +106,7 @@
     }
 }
 
+ 
 @media (max-width: 768px) {
     .qualifications-content {
         flex-direction: column;
@@ -127,7 +133,7 @@
         display: none;
     }
 
-  .qualifications-section::before {
+    .qualifications-section::before {
         top: 32%;
         width: 380px;
         height: 380px;
@@ -135,6 +141,7 @@
     }
 }
 
+ 
 @media (max-width: 480px) {
     .qualifications-title {
         font-size: clamp(24px, 10vw, 36px);

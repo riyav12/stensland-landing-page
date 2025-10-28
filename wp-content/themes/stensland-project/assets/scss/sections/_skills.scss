@@ -4,14 +4,14 @@
   background-color: #fff;
 }
 
-/* Header */
+ 
 .skills-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .skills-title {
@@ -34,11 +34,11 @@
   line-height: 160%;
   margin: 0;
   width: 827px;
-  height: 64px;
+  height: auto;
   margin-top: 136px;
 }
 
-/* --- MARQUEE LOGOS --- */
+/* Logos */
 .skills-logos-wrapper {
   position: relative;
   overflow: hidden;
@@ -51,6 +51,7 @@
   gap: 60px;
   flex-shrink: 0;
   white-space: nowrap;
+  animation: scroll-logos 40s linear infinite; 
 }
 
 .skills-logos img {
@@ -66,7 +67,7 @@
   filter: grayscale(0%);
 }
 
-/* Infinite scrolling animation */
+/*Scrolling animation */
 @keyframes scroll-logos {
   0% {
     transform: translateX(0);
@@ -76,28 +77,32 @@
   }
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 992px) {
+
+@media (max-width: 1199px) {
   .skills-header {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 20px;
   }
 
   .skills-title {
-    font-size: 48px;
+    font-size: 60px;
     margin: 0 auto;
     text-align: center;
   }
 
   .skills-desc {
     font-size: 15px;
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
-    margin: 20px auto 60px;
-    width: 90%;
+    margin-top: 10px;
   }
 
   .skills-logos {
     gap: 40px;
+    animation: scroll-logos 35s linear infinite; 
   }
 
   .skills-logos img {
@@ -105,20 +110,20 @@
   }
 }
 
+ 
 @media (max-width: 600px) {
   .skills-title {
     font-size: 36px;
-    text-align: center;
   }
 
   .skills-desc {
     font-size: 14px;
-    text-align: center;
-    width: 100%;
+    width: 95%;
   }
 
   .skills-logos {
     gap: 25px;
+    animation: scroll-logos 30s linear infinite;
   }
 
   .skills-logos img {

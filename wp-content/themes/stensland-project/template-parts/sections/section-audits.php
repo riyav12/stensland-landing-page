@@ -21,7 +21,7 @@
       <!-- Left side: Image -->
       <div class="audits-image-wrap">
         <?php 
-          $image = get_field('audits_image'); // URL return type
+          $image = get_field('audits_image'); 
           if( !empty($image) ):
         ?>
           <img src="<?php echo esc_url($image); ?>" alt="Audit Image" class="audits-image">
