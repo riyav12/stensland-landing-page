@@ -151,18 +151,19 @@ body {
   transform: translateY(0);
 }
 
-/* ✅ Transferred hover color code */
+ 
 .lang-dropdown a {
   display: block;
   padding: 8px 12px;
   text-decoration: none;
   color: #001C31;
+  width: 108px;
   transition: all 0.2s ease;
 }
 
 .lang-dropdown a:hover {
-  background-color: #f1f1f1; /* light gray hover */
-  color: #001C31; /* keep readable dark text */
+  background-color: #f1f1f1;  
+  color: #001C31;  
 }
 
 /* --- Book a Call Button --- */
@@ -176,11 +177,14 @@ body {
   transition: background 0.3s ease;
   display: flex;
   align-items: center;
+  justify-content: center;  
   height: 34px;
-  width: 116px;
+  width: 148px;
   font-weight: 400;
-  font-family: dm-sans, sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;  
 }
+
 
 .book-btn svg {
   margin-left: 6px;

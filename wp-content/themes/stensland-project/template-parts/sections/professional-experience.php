@@ -20,13 +20,12 @@ if (!$experiences) return;
       $count = 0;
       foreach ($experiences as $index => $exp):
           $count++;
-          $visible = $count <= 3 ? '' : 'style="display:none;"';
-          $clickable = ($count === 3) ? 'clickable' : '';
+          $visible_attr = $count <= 3 ? '' : 'style="display:none;"';
       ?>
         <div 
-          class="experience-item <?php echo $clickable; ?>" 
-          data-index="<?php echo $index; ?>" 
-          <?php echo $visible; ?>
+          class="experience-item" 
+          data-index="<?php echo esc_attr($index); ?>" 
+          <?php echo $visible_attr; ?>
         >
           <h3><?php echo esc_html($exp['year_range']); ?></h3>
           <p><?php echo nl2br(esc_html($exp['description'])); ?></p>
@@ -36,32 +35,3 @@ if (!$experiences) return;
   </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const items = document.querySelectorAll(".experience-item");
-  let visibleCount = 3;
-
-  function makeNextClickable() {
-    items.forEach(item => item.classList.remove("clickable")); 
-    if (items[visibleCount - 1]) {
-      const nextClickable = items[visibleCount - 1];
-      nextClickable.classList.add("clickable");
-      nextClickable.addEventListener("click", handleClick);
-    }
-  }
-
-  function handleClick() {
-    const nextItem = items[visibleCount];
-    if (nextItem) {
-      nextItem.style.display = "block";
-      nextItem.style.animation = "slideInRight 0.8s ease forwards";
-      visibleCount++;
-      makeNextClickable();
-    }
-    this.classList.remove("clickable");
-    this.removeEventListener("click", handleClick);
-  }
-
-  makeNextClickable();
-});
-</script>

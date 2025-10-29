@@ -230,7 +230,7 @@ function register_education_block() {
 
 // Register "Projects" ACF Gutenberg Block
 function stensland_register_projects_block() {
-    // Check if ACF is active
+     
     if( function_exists('acf_register_block_type') ) {
         acf_register_block_type(array(
             'name'              => 'projects',
@@ -255,7 +255,7 @@ wp_enqueue_script('projects-tabs', get_template_directory_uri() . '/assets/js/pr
 
 
 function stensland_enqueue_scripts() {
-    // Existing scripts
+     
     wp_enqueue_script('projects-popup', get_template_directory_uri() . '/assets/js/project-popup.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'stensland_enqueue_scripts');
@@ -265,11 +265,11 @@ add_action('wp_enqueue_scripts', 'stensland_enqueue_scripts');
 
 
 function enqueue_client_reviews_assets() {
-  // Swiper files
+   
   wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' );
   wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array(), null, true );
 
-  // Initialize after DOM ready
+   
   wp_add_inline_script( 'swiper-js', "
     document.addEventListener('DOMContentLoaded', function() {
       const el = document.querySelector('.client-reviews-slider');
@@ -298,3 +298,27 @@ if ( function_exists('pll_register_string') ) {
     pll_register_string('Header', 'STENSLAND', 'Header');
     pll_register_string('Header', 'Book a Call', 'Header');
 }
+
+
+function enqueue_professional_experience_script() {
+    wp_enqueue_script(
+        'professional-experience',
+        get_template_directory_uri() . '/assets/js/professional-experience.js',
+        array(),  
+        filemtime(get_template_directory() . '/assets/js/professional-experience.js'),
+        true  
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_professional_experience_script');
+
+
+function enqueue_header_lang_script() {
+    wp_enqueue_script(
+        'header-lang-toggle',
+        get_template_directory_uri() . '/assets/js/header-lang-toggle.js',
+        array(),  
+        filemtime(get_template_directory() . '/assets/js/header-lang-toggle.js'),
+        true  
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_header_lang_script');

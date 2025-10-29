@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // ----- 1. Tab Switching -----
+   
     const tabs = document.querySelectorAll(".projects-section .tab");
     const grids = document.querySelectorAll(".projects-section .projects-grid");
 
@@ -20,10 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    showTab(0); // Show first tab by default
-
-    // ----- 2. Project Popup -----
-    // Create popup overlay
+    showTab(0); 
     const popupOverlay = document.createElement('div');
     popupOverlay.classList.add('project-popup-overlay');
     popupOverlay.innerHTML = `
@@ -37,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const popupContent = popupOverlay.querySelector('.popup-content');
     const popupClose = popupOverlay.querySelector('.popup-close');
 
-    // Open popup function
+    
     function openPopup(project) {
         const img = project.querySelector('img') ? project.querySelector('img').outerHTML : '';
         const title = project.querySelector('.project-title') ? `<h3>${project.querySelector('.project-title').innerText}</h3>` : '';
@@ -50,16 +47,15 @@ document.addEventListener("DOMContentLoaded", function() {
         popupOverlay.style.display = 'flex';
     }
 
-    // Attach click events to all visible project items
+    
     function attachProjectClicks() {
         const visibleProjects = document.querySelectorAll('.projects-grid.active-grid .project-item');
         visibleProjects.forEach(project => {
             project.style.cursor = 'pointer';
-            // Remove any previous listener to prevent duplicates
             project.replaceWith(project.cloneNode(true));
         });
 
-        // Re-query and attach
+         
         document.querySelectorAll('.projects-grid.active-grid .project-item').forEach(project => {
             project.addEventListener('click', function(e) {
                 openPopup(project);
@@ -67,21 +63,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    attachProjectClicks(); // Initial attach
+    attachProjectClicks();  
 
     // Close popup on X
     popupClose.addEventListener('click', function() {
         popupOverlay.style.display = 'none';
     });
 
-    // Close popup when clicking outside content
+     
     popupOverlay.addEventListener('click', function(e) {
         if(e.target === popupOverlay) {
             popupOverlay.style.display = 'none';
         }
     });
 
-    // Re-attach project clicks after tab change
+     
     tabs.forEach((tab, index) => {
         tab.addEventListener("click", () => {
             setTimeout(() => {

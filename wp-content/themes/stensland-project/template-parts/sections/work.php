@@ -29,7 +29,7 @@ $work_btn3_file = get_field('work_btn3_file');
                 <a href="<?php echo esc_url($work_btn1_link); ?>" class="work-btn">
                     <span><?php echo esc_html($work_btn1_text); ?></span>
                     <span class="arrow">
-                        <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
@@ -41,7 +41,7 @@ $work_btn3_file = get_field('work_btn3_file');
                 <a href="<?php echo esc_url($work_btn2_link); ?>" class="work-btn">
                     <span><?php echo esc_html($work_btn2_text); ?></span>
                     <span class="arrow">
-                        <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
@@ -53,7 +53,7 @@ $work_btn3_file = get_field('work_btn3_file');
                 <a href="<?php echo esc_url($work_btn3_file['url']); ?>" class="work-btn" download>
                     <span><?php echo esc_html($work_btn3_text); ?></span>
                     <span class="arrow">
-                        <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
