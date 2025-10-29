@@ -40,13 +40,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleClick() {
     const firstVisible = items[startIndex];
-    const nextIdx = (startIndex + visibleCount) % items.length;  
-    const nextItem = items[nextIdx];
+    const nextIdx = startIndex + visibleCount;
 
-    // Fade out first visible
+    // Check if we’ve reached the end (last visible group)
+    const isAtEnd = nextIdx >= items.length;
+
+    if (isAtEnd) {
+      // Reset to first 3 entries
+      firstVisible.style.animation = "fadeOutLeft 0.5s ease forwards";
+
+      setTimeout(() => {
+        startIndex = 0;
+        updateVisible(true);
+      }, 500);
+
+      return;
+    }
+
+    // Normal forward scroll
+    const nextItem = items[nextIdx];
     firstVisible.style.animation = "fadeOutLeft 0.5s ease forwards";
 
-     
     setTimeout(() => {
       firstVisible.style.display = "none";
       firstVisible.style.animation = "";
@@ -56,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nextItem.style.animation = "slideInRight 0.6s ease forwards";
       nextItem.style.opacity = 1;
 
-      startIndex = (startIndex + 1) % items.length;
+      startIndex += 1;
       setClickable();
     }, 500);
   }

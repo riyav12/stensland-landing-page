@@ -251,7 +251,16 @@ function stensland_register_projects_block() {
 }
 add_action('acf/init', 'stensland_register_projects_block');
 
-wp_enqueue_script('projects-tabs', get_template_directory_uri() . '/assets/js/projects-tabs.js', array(), null, true);
+function enqueue_projects_tabs_script() {
+    wp_enqueue_script(
+        'projects-tabs',
+        get_template_directory_uri() . '/assets/js/projects-tabs.js',
+        array(),
+        filemtime(get_template_directory() . '/assets/js/projects-tabs.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_projects_tabs_script');
 
 
 function stensland_enqueue_scripts() {
