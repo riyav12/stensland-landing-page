@@ -108,8 +108,8 @@
 }
 
 .footer-social-icons .social-icon img {
-  width: 18.75px;
-  height: 15px;
+  width: 21.75px;
+  height: 20px;
   filter: brightness(0) invert(1);
 }
 
@@ -321,7 +321,6 @@ body {
   transform: translateY(0);
 }
 
-/* ✅ Transferred hover color code */
 .lang-dropdown a {
   display: block;
   padding: 8px 12px;
@@ -331,8 +330,8 @@ body {
 }
 
 .lang-dropdown a:hover {
-  background-color: #f1f1f1; /* light gray hover */
-  color: #001C31; /* keep readable dark text */
+  background-color: #f1f1f1;
+  color: #001C31;
 }
 
 /* --- Book a Call Button --- */
@@ -346,10 +345,12 @@ body {
   transition: background 0.3s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 34px;
-  width: 116px;
+  width: 148px;
   font-weight: 400;
-  font-family: dm-sans, sans-serif;
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
 }
 
 .book-btn svg {
@@ -504,7 +505,7 @@ body {
   display: inline-flex;
   background-color: #001C31;
   border-radius: 50%;
-  width: 45px;
+  width: 132px;
   height: 45px;
   justify-content: center;
   align-items: center;
@@ -725,7 +726,7 @@ body {
 
 .audit-year {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Inter", sans-serif;
   color: rgba(0, 28, 49, 0.1019607843);
   margin-bottom: 6px;
@@ -1748,36 +1749,39 @@ body {
 .work-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 28px;
-  border: 1px solid #D5DCE3;
-  border-radius: 4px;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px 24px;
+  height: 44px;
+  border: 0.5px solid rgba(0, 28, 49, 0.5);
+  border-radius: 2px;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 20px;
-  font-weight: 500;
+  line-height: 24px;
+  color: #001C31;
   text-decoration: none;
-  color: #0C2439;
-  background-color: #FFF;
   transition: all 0.3s ease;
-  min-width: 226px;
+  min-width: 242px;
 }
 
 .work-btn .arrow {
-  display: inline-block;
-  background-color: #0C2439;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1;
-  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #001C31;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 /* Hover effects */
 .work-btn:hover {
-  background-color: #c9daeb;
-  color: #fff;
-  border-color: #c9daeb;
+  background: #f9f9f9;
+  border-color: #001C31;
 }
 
 .work-btn svg path {
@@ -1785,8 +1789,15 @@ body {
   transition: stroke 0.3s;
 }
 
-.work-btn:hover svg path {
-  stroke: #fff;
+.work-btn .arrow svg path {
+  stroke: #F9F4EE;
+}
+
+.work-btn .arrow svg {
+  transform: scale(1.4);
+  transition: transform 0.3s ease;
+  margin-left: 6px;
+  margin-top: 4px;
 }
 
 @media (max-width: 1200px) {
@@ -1951,8 +1962,8 @@ body {
 }
 
 .item-icon img {
-  width: 49px;
-  height: 50px;
+  width: 44px;
+  height: 66px;
 }
 
 .item-title {
@@ -2102,6 +2113,7 @@ body {
 
 .experience-item {
   margin-bottom: 50px;
+  position: relative;
 }
 
 .experience-item h3 {
@@ -2119,19 +2131,18 @@ body {
 .experience-item h3::after {
   content: "";
   position: absolute;
-  right: 0;
   top: 50%;
   transform: translateY(-50%);
+  right: 0;
   width: 405px;
-  height: 2px;
-  background-color: #8c8c8c;
+  height: 1px;
+  background-color: #ffffff;
 }
 
 .experience-item p {
   margin-top: 10px;
   font-size: 16px;
-  font-weight: 400;
-  font-family: "Inter", sans-serif;
+  font-family: dm-sans, sans-serif;
   line-height: 140%;
 }
 
@@ -2157,6 +2168,7 @@ body {
     transform: translateX(0);
   }
 }
+/* --- Responsive Adjustments --- */
 @media (max-width: 1200px) {
   .experience-left h2 {
     font-size: 70px;
