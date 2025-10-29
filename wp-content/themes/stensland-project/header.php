@@ -61,25 +61,6 @@
   </div>
 </header>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const langSelect = document.querySelector('.lang-select');
-  const currentLang = langSelect?.querySelector('.lang');
-  const dropdown = langSelect?.querySelector('.lang-dropdown');
-
-  if (!langSelect || !dropdown) return;
-
-  langSelect.addEventListener('click', (e) => {
-    e.stopPropagation();
-    langSelect.classList.toggle('open');
-  });
-
-  document.addEventListener('click', () => {
-    langSelect.classList.remove('open');
-  });
-});
-</script>
-
 <?php wp_footer(); ?>
 </body>
 </html>

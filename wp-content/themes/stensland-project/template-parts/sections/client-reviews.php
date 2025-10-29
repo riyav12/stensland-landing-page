@@ -1,6 +1,6 @@
 <section class="client-reviews-section">
   <div class="container">
-    <div class="client-reviews-wrapper">
+    <div class="">
 
       <!-- Left: Heading -->
       <div class="client-reviews-left">
