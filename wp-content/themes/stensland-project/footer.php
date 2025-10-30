@@ -1,18 +1,17 @@
 </main>
-<footer class="site-footer main-footer">
+<footer id="footer" footer class="site-footer main-footer">
     <div class="container footer-container">
 
         <!-- Footer Branding: Replicate Header Brand -->
         <div class="footer-branding">
-            <a href="<?php echo home_url(); ?>" class="brand">
-                <div class="logo-circle">
-                    <span class="logo-th">
-                        <span class="t">T</span><span class="h">H</span>
-                    </span>
-                </div>
-                <span class="brand-text">STENSLAND</span>
-            </a>
-        </div>
+  <a href="<?php echo home_url(); ?>" class="brand">
+    <div class="logo-circle">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Stensland Logo" class="logo-img">
+    </div>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo1.svg" alt="Stensland Text" class="brand-text-img">
+  </a>
+</div>
 
         <div class="footer-contact-info">
             <a href="mailto:haakonstensland@email.com" class="footer-email">haakonstensland@email.com</a>

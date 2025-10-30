@@ -23,8 +23,6 @@ function register_acf_hero_block() {
 }
 add_action('acf/init', 'register_acf_hero_block');
 
-
-
 // Register Skills Block
 add_action('acf/init', function() {
     if( function_exists('acf_register_block_type') ) {
@@ -42,7 +40,6 @@ add_action('acf/init', function() {
         ));
     }
 });
-
 
 if( function_exists('acf_register_block_type') ) {
 
@@ -63,7 +60,6 @@ if( function_exists('acf_register_block_type') ) {
     ));
 }
 
-
 if( function_exists('acf_register_block_type') ) {
 
     // Courses Block
@@ -82,7 +78,6 @@ if( function_exists('acf_register_block_type') ) {
         ),
     ));
 }
-
 
 function register_audits_block() {
     acf_register_block_type(array(
@@ -115,8 +110,6 @@ function register_client_reviews_block() {
 }
 add_action('acf/init', 'register_client_reviews_block');
 
-
-
 function register_work_section_block() {
     if( function_exists('acf_register_block_type') ) {
         acf_register_block_type(array(
@@ -133,7 +126,6 @@ function register_work_section_block() {
 }
 add_action('acf/init', 'register_work_section_block');
 
-
 function register_standards_block() {
     if( function_exists('acf_register_block_type') ) {
         acf_register_block_type(array(
@@ -149,7 +141,6 @@ function register_standards_block() {
     }
 }
 add_action('acf/init', 'register_standards_block');
-
 
 // Register ACF Gutenberg block for Professional Experience
 add_action('acf/init', 'register_professional_experience_block');
@@ -168,10 +159,7 @@ function register_professional_experience_block() {
         ));
     }
 }
-?>
 
-
-<?php
 // Register ACF Gutenberg block for About Me
 add_action('acf/init', 'register_about_me_block');
 function register_about_me_block() {
@@ -198,8 +186,6 @@ function register_about_me_block() {
         ));
     }
 }
-
-
 
 // Register ACF Gutenberg Block: Education
 add_action('acf/init', 'register_education_block');
@@ -269,10 +255,6 @@ function stensland_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'stensland_enqueue_scripts');
 
-
-
-
-
 function enqueue_client_reviews_assets() {
    
   wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' );
@@ -280,34 +262,42 @@ function enqueue_client_reviews_assets() {
 
    
   wp_add_inline_script( 'swiper-js', "
-    document.addEventListener('DOMContentLoaded', function() {
-      const el = document.querySelector('.client-reviews-slider');
-      if (!el) { console.error('client-reviews-slider not found'); return; }
-      const clientSwiper = new Swiper(el, {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: '.client-review-next',
-          prevEl: '.client-review-prev',
-        },
-        speed: 700,
-        autoHeight: true,
-        // grabCursor: true, // optional
-      });
-      console.log('Client Reviews Swiper initialized');
+  document.addEventListener('DOMContentLoaded', function() {
+    const el = document.querySelector('.client-reviews-slider');
+    if (!el) { console.error('client-reviews-slider not found'); return; }
+
+    const slides = el.querySelectorAll('.swiper-slide');
+    const arrows = document.querySelector('.client-review-arrows');
+
+    // Hide arrows if there's only one slide
+    if (slides.length <= 1 && arrows) {
+      arrows.style.display = 'none';
+    }
+
+    const clientSwiper = new Swiper(el, {
+      loop: slides.length > 1, // Only loop if more than one slide
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: slides.length > 1 ? {
+        nextEl: '.client-review-next',
+        prevEl: '.client-review-prev',
+      } : {}, // Disable navigation if only 1 slide
+      speed: 700,
+      autoHeight: true,
     });
-  " );
+
+    console.log('Client Reviews Swiper initialized with ' + slides.length + ' slide(s)');
+  });
+");
+
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_client_reviews_assets' );
-
 
 // Register custom strings for Polylang translation
 if ( function_exists('pll_register_string') ) {
     pll_register_string('Header', 'STENSLAND', 'Header');
     pll_register_string('Header', 'Book a Call', 'Header');
 }
-
 
 function enqueue_professional_experience_script() {
     wp_enqueue_script(
