@@ -183,3 +183,22 @@
         height: 14px;
     }
 }
+
+.footer-branding .logo-circle {
+  overflow: hidden;
+}
+
+.footer-branding .logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.footer-branding .brand-text-img {
+  height: 27px;
+  width: 186px;
+  display: block;
+  margin-top: 2px;
+}

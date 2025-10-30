@@ -17,7 +17,7 @@ $hero_bg_image = get_field('hero_bg_image');
             <h1 class="hero-title">
                 <?php echo esc_html($hero_title); ?>
             </h1>
-            <a href="#about" class="scroll-down">
+            <a href="#footer" class="scroll-down">
                 Scroll down <span class="arrow-down">&#8595;</span>
             </a>
         </div>

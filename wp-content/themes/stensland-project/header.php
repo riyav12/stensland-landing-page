@@ -12,16 +12,16 @@
 <header class="site-header">
   <div class="container header-inner">
     <!-- Left: Logo -->
-    <div class="header-left">
-      <a href="<?php echo home_url(); ?>" class="brand">
-        <div class="logo-circle">
-          <span class="logo-th">
-            <span class="t">T</span><span class="h">H</span>
-          </span>
-        </div>
-        <span class="brand-text"><?php echo pll__('STENSLAND'); ?></span>
-      </a>
+    <!-- Left: Logo -->
+<div class="header-left">
+  <a href="<?php echo home_url(); ?>" class="brand">
+    <div class="logo-circle">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="TH Logo" class="logo-img">
     </div>
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo1.svg" alt="Stensland Text" class="brand-text-img">
+  </a>
+</div>
+
 
     <!-- Right: Language + Button -->
     <div class="header-right">
