@@ -310,6 +310,10 @@
     padding: 40px 0;
   }
 
+  .projects-section .project-item .project-meta .project-title {
+    text-align: center;
+  }
+
   .projects-section .projects-header {
     flex-direction: column;
     align-items: center;
@@ -408,4 +412,24 @@
   .projects-grid .project-item {
     padding: 10px 12px 16px;
   }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    overflow-x: hidden;
+  }
+
+  .projects-grid {
+    justify-content: center;
+  }
+
+  .projects-grid .project-item {
+    margin: 0 auto;
+    max-width: 92%;
+  }
+ .project-popup-overlay{
+  margin: 0 auto;
+  width:86%;
+ }
+  
 }
